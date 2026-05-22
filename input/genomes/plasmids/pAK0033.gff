@@ -1,0 +1,51 @@
+##gff-version 3
+##source-version geneious 2025.0.3
+##sequence-region	pAK0033	1	6618
+pAK0033	Geneious	region	1	6618	.	+	0	Is_circular=true
+pAK0033	Geneious	CDS	211	1026	.	-	.	Name=kan2 marker
+pAK0033	Geneious	gene	211	1026	.	-	.	Name=KanR
+pAK0033	Geneious	restriction site	718	723	.	.	.	Name=SmaI
+pAK0033	Geneious	origin of replication	1132	1751	.	+	.	Name=pBR322 origin
+pAK0033	Geneious	restriction site	1792	1797	.	.	.	Name=PscI
+pAK0033	Geneious	restriction site	1914	1920	.	-	.	Name=LguI
+pAK0033	Geneious	restriction site	1914	1920	.	-	.	Name=SapI
+pAK0033	Geneious	rep_origin	2166	2357	.	-	.	Name=ROP
+pAK0033	Geneious	protein_bind	2841	2878	.	+	.	Name=operator: P(Cat)
+pAK0033	Geneious	promoter	2844	2849	.	+	.	Name=-35 signal
+pAK0033	Geneious	promoter	2867	2872	.	+	.	Name=-10 signal
+pAK0033	Geneious	RBS	2887	2898	.	+	.	
+pAK0033	Geneious	CDS	2905	3528	.	+	.	Name=tetR gene
+pAK0033	Geneious	gene	2905	3528	.	+	.	Name=tetR
+pAK0033	Geneious	restriction site	3483	3488	.	.	.	Name=NdeI
+pAK0033	Geneious	terminator	3576	3619	.	+	.	
+pAK0033	Geneious	terminator	3660	3679	.	+	.	
+pAK0033	Geneious	protein_bind	3702	3721	.	+	.	Name=tetR binding site protein bind
+pAK0033	Geneious	promoter	3702	3759	.	+	.	
+pAK0033	Geneious	promoter	3721	3726	.	+	.	Name=-35 signal
+pAK0033	Geneious	protein_bind	3727	3746	.	+	.	Name=tetR binding site protein bind
+pAK0033	Geneious	promoter	3744	3749	.	+	.	Name=-10 signal
+pAK0033	Geneious	RBS	3768	3786	.	.	.	Name=RBS_constrained_10k
+pAK0033	Geneious	extracted region	3771	3771	.	.	.	Name=Extracted region from Filice_a4d_1_pAK15_1 (reversed)
+pAK0033	Geneious	CDS	3787	5685	.	+	.	Name=FsRT-Cas1(opt.)
+pAK0033	Geneious	gene	3787	5685	.	+	.	Name=FsRT-Cas1
+pAK0033	Geneious	restriction site	3902	3907	.	.	.	Name=ScaI
+pAK0033	Geneious	RBS	5692	5711	.	.	.	Name=RBS_constrained_2k
+pAK0033	Geneious	CDS	5712	5972	.	+	.	Name=FsCas2(opt.)
+pAK0033	Geneious	gene	5712	5972	.	+	.	Name=FsCas2
+pAK0033	Geneious	restriction site	5859	5865	.	.	.	Name=Eco91I
+pAK0033	Geneious	restriction site	5972	5979	.	.	.	Name=PspXI
+pAK0033	Geneious	restriction site	5973	5978	.	.	.	Name=XhoI
+pAK0033	Geneious	terminator	5990	6032	.	+	.	
+pAK0033	Geneious	restriction site	6012	6017	.	+	.	Name=BsaI
+pAK0033	Geneious	terminator	6033	6079	.	+	.	
+pAK0033	Geneious	terminator	6077	6199	.	+	.	
+pAK0033	Geneious	terminator	6133	6187	.	+	.	
+pAK0033	Geneious	promoter	6205	6239	.	+	.	
+pAK0033	Geneious	restriction site	6222	6227	.	.	.	Name=XmaJI
+pAK0033	Geneious	promoter	6243	6243	.	.	.	
+pAK0033	Geneious	Leader	6251	6441	.	+	.	Name=leader
+pAK0033	Geneious	DR	6442	6470	.	+	.	Name=DR 2
+pAK0033	Geneious	terminator	6527	6616	.	-	.	
+pAK0033	Geneious	restriction site	6598	6603	.	.	.	Name=AflII
+pAK0033	Geneious	restriction site	6617	6624	.	.	.	Name=NotI
+pAK0033	Geneious	restriction site	6618	6623	.	.	.	Name=Eco52I

@@ -1,0 +1,21 @@
+project: P3022
+
+# Input data
+counts: input/data/P3022/merged_counts_table_filtered_test30k.tsv
+
+# Output
+output_dir: output/P3022
+
+# Reference genomes
+genome:      input/genomes/chromosomes/MG1655_U00096_DSMZ.fasta
+plasmid:     input/genomes/plasmids/pAK0033.fasta
+genome_gff:  input/genomes/chromosomes/MG1655_U00096_DSMZ.gff
+plasmid_gff: input/genomes/plasmids/pAK0033.gff
+
+# Compute
+cores:      32
+chunk_size: 15000
+
+# Analysis thresholds
+cpm_max_thresh:   7     # min max log2-CPM for a gene to be called a hit
+cpm_range_thresh: 0.5   # min log2-CPM range across samples for a hit

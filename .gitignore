@@ -1,0 +1,44 @@
+# Input — ignore everything except reference genomes and the toy dataset
+input/**
+!input/genomes/
+!input/genomes/chromosomes/
+!input/genomes/chromosomes/**
+!input/genomes/plasmids/
+!input/genomes/plasmids/**
+!input/data/
+!input/data/P3022/
+!input/data/P3022/merged_counts_table_filtered_test30k.tsv
+
+# Pipeline outputs
+output/
+
+# Nextflow (not the primary runner — kept locally but not committed)
+workflow.nf
+nextflow.config
+work/
+.nextflow/
+.nextflow.log
+.nextflow.log.*
+
+# Pypiper logs and flags (written to logs/pypiper/)
+pipeline_output/
+*.flag
+*_log.md
+*_commands.sh
+*_profile.tsv
+stats.yaml
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

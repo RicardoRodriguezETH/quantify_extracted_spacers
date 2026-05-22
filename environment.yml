@@ -1,0 +1,33 @@
+name: quantify_extracted_spacers
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  # R runtime
+  - r-base>=4.3
+
+  # Bioconductor packages
+  - bioconductor-biostrings
+  - bioconductor-biocparallel
+  - bioconductor-genomicranges
+  - bioconductor-genomeinfoDb
+  - bioconductor-rtracklayer
+  - bioconductor-edger
+  - bioconductor-pwalign
+
+  # CRAN packages
+  - r-tidyverse
+  - r-data.table
+  - r-patchwork
+  - r-logger
+  - r-lubridate
+  - r-stringdist
+  - r-progressr
+  - r-pheatmap        # optional: CPM heatmap; falls back to base graphics if absent
+
+  # Python
+  - python>=3.10
+  - pip
+  - pip:
+    - piper            # pypiper pipeline manager
+    - pyyaml
