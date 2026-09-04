@@ -13,7 +13,6 @@ dependencies:
   - bioconductor-genomeinfoDb
   - bioconductor-rtracklayer
   - bioconductor-edger
-  - bioconductor-pwalign
 
   # CRAN packages
   - r-tidyverse

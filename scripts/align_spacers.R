@@ -1,5 +1,4 @@
 suppressPackageStartupMessages({
-  library(pwalign)
   library(tidyverse)
   library(Biostrings)
   library(BiocParallel)
@@ -151,19 +150,32 @@ find_nearest_gene <- function(out, genome_genes) {
   return(out)
 }
 
-add_alignment_metadata_columns <- function(spacers_dt, out) {
+add_alignment_metadata_columns <- function(spacers_dt, out, seq_name, plasmid_name) {
+  # Every batch must emit the same 12 category columns (2 seqnames x 2 strands x
+  # {0,1,2} mismatches), even when a batch has zero matches in some category —
+  # otherwise batches get written with different column counts and appending
+  # them to one TSV silently corrupts or truncates the output.
+  all_categs <-
+    apply(
+      expand.grid(seqnames = c(seq_name, plasmid_name), strand = c("+", "-"), num_mismatch = 0:2),
+      1, function(x) paste0(x[1], "_", x[2], "_", x[3])
+    )
+
   out_wide <-
     out %>%
     mutate(categ = paste0(seqnames, "_", strand, "_", num_mismatch)) %>%
     group_by(name, categ) %>%
     summarize(num_align = n()) %>%
     pivot_wider(names_from = "categ",
-                values_from = "num_align", 
+                values_from = "num_align",
                 values_fill = 0) %>%
     ungroup()
 
+  missing_categs <- setdiff(all_categs, colnames(out_wide))
+  out_wide[missing_categs] <- 0L
+
   col_names <-
-    c(colnames(out_wide)[1], sort(colnames(out_wide)[-1]))
+    c(colnames(out_wide)[1], sort(all_categs))
 
   out_wide <-
     out_wide %>%
@@ -272,7 +284,7 @@ process_batch <- function(spacers_dt, batch_index,
   log_info("Batch {batch_index}: aligned in {time_length(now() - start_time, 'seconds')} seconds")
 
   out <- find_nearest_gene(out, genome_genes)
-  spacers_dt <- add_alignment_metadata_columns(spacers_dt, out)
+  spacers_dt <- add_alignment_metadata_columns(spacers_dt, out, seq_name, plasmid_name)
 
   return(spacers_dt)
 }
