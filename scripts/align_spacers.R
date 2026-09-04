@@ -1,5 +1,4 @@
 suppressPackageStartupMessages({
-  library(pwalign)
   library(tidyverse)
   library(Biostrings)
   library(BiocParallel)

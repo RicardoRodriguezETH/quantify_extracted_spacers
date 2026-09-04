@@ -46,7 +46,7 @@ Install from Bioconductor and CRAN:
 if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 BiocManager::install(c(
   "Biostrings", "BiocParallel", "GenomicRanges",
-  "GenomeInfoDb", "rtracklayer", "edgeR", "pwalign"
+  "GenomeInfoDb", "rtracklayer", "edgeR"
 ))
 install.packages(c(
   "tidyverse", "data.table", "patchwork",
